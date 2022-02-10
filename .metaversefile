@@ -1,0 +1,7 @@
+{
+  "name": "morpher",
+  "start_url": "index.js",
+  "components": {
+    "activate": true
+  }
+}
