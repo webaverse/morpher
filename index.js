@@ -19,7 +19,9 @@ export default e => {
   // const speed = 0.03;
   // const angularSpeed = 0.02;
   (async () => {
-    morpher = await metaversefile.createAppAsync(`${baseUrl}morpher_mixed_v3_vian.glb`);
+    morpher = await metaversefile.createAppAsync({
+      start_url: `${baseUrl}morpher_mixed_v3_vian.glb`,
+    });
     // morpher.quaternion.copy(y180Quaternion);
     morpher.frustumCulled = false;
     app.add(morpher);
