@@ -1,7 +1,15 @@
 {
   "name": "morpher",
   "start_url": "index.js",
-  "components": {
-    "activate": true
-  }
+  "components": [
+    {
+      "key": "wear",
+      "value": {
+        "boneAttachment": "head",
+        "position": [0.075, -0.08, 0],
+        "quaternion": [0, 0.7071067811865475, 0, 0.7071067811865476],
+        "scale": [0.3, 0.3, 0.3]
+      }
+    }
+  ]
 }
