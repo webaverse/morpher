@@ -110,8 +110,9 @@ export default e => {
   });
 
   const physicsIds = [];
-  const physicsMaterial = new THREE.Vector3(0.5, 0.5, 1);
-  const physicsObject = physics.addCapsuleGeometry(app.position, app.quaternion, 0.3, 0.2, physicsMaterial);
+  const physicsMaterial = [0.5, 0.5, 1];
+  const materialAddress = physics.createMaterial(physicsMaterial);
+  const physicsObject = physics.addCapsuleGeometry(app.position, app.quaternion, 0.3, 0.2, materialAddress);
   // physicsObject.detached = true;
   physicsIds.push(physicsObject);
   
@@ -119,6 +120,7 @@ export default e => {
     for (const physicsId of physicsIds) {
       physics.removeGeometry(physicsId);
     }
+    physics.destroyMaterial(materialAddress);
   });
 
   app.getPhysicsObjects = () => physicsIds;
