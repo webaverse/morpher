@@ -1,5 +1,6 @@
 {
   "name": "morpher",
+  "description": "morpher",
   "start_url": "index.js",
   "components": [
     {
